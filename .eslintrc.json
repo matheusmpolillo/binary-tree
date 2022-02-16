@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": false,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "extends": [
+        "prettier"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "indent": ["off"],
+        "quotes": ["error", "single"],
+        "semi": ["off"]
+    }
+}
