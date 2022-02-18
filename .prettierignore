@@ -3,6 +3,11 @@
 
 # Node
 node_modules
+package-lock.json
+package.json
 
 # Docs
 README.md
+
+# Jest
+coverage
