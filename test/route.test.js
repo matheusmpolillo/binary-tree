@@ -3,7 +3,7 @@ import Node from '../src/classes/node.js'
 
 describe('Route tests', () => {
     /**
-     * Árvore
+     * First tree
      *
      *          '+'
      *        /     \
@@ -20,21 +20,21 @@ describe('Route tests', () => {
      */
 
     const tree = new Tree('+')
-    /* Primeiro nível */
+    /* First level */
     Node.setLeft(tree.root, '*')
     Node.setRight(tree.root, '-')
-    /* Segundo nível - Left */
+    /* Second level - Left */
     Node.setLeft(tree.root.left, 'A')
     Node.setRight(tree.root.left, 'B')
-    /* Segundo nível - Right */
+    /* Third level - Right */
     Node.setLeft(tree.root.right, 'C')
     Node.setRight(tree.root.right, '/')
-    /* Terceiro nível - Right */
+    /* Fourth level - Right */
     Node.setLeft(tree.root.right.right, 'D')
     Node.setRight(tree.root.right.right, 'E')
 
     /**
-     * Segunda árvore
+     * Second tree
      *
      *     '+'
      *   /    \
@@ -53,16 +53,16 @@ describe('Route tests', () => {
      */
 
     const secondTree = new Tree('+')
-    /* Primeiro nível */
+    /* First level */
     Node.setLeft(secondTree.root, 'a')
     Node.setRight(secondTree.root, '*')
-    /* Segundo nível - Right */
+    /* Second level - Right */
     Node.setLeft(secondTree.root.right, 'b')
     Node.setRight(secondTree.root.right, '-')
-    /* Terceiro nível - Right */
+    /* Third level - Right */
     Node.setLeft(secondTree.root.right.right, '/')
     Node.setRight(secondTree.root.right.right, 'e')
-    /* Quarto nível - Left */
+    /* Fourth level - Left */
     Node.setLeft(secondTree.root.right.right.left, 'c')
     Node.setRight(secondTree.root.right.right.left, 'd')
 
