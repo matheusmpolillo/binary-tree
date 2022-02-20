@@ -73,8 +73,8 @@ describe('Route tests', () => {
         })
 
         test('Inorder Traversal', () => {
-            const preOrderResult = tree.inorderTraversal(tree.root)
-            expect(preOrderResult).toStrictEqual([])
+            const preOrderResult = tree.inorderTraversal(tree.root).join(' ')
+            expect(preOrderResult).toStrictEqual('A * B + C - D / E')
         })
 
         test('Postorder Traversal', () => {
@@ -97,8 +97,10 @@ describe('Route tests', () => {
         })
 
         test('Inorder Traversal', () => {
-            const preOrderResult = secondTree.inorderTraversal(secondTree.root)
-            expect(preOrderResult).toStrictEqual([])
+            const preOrderResult = secondTree
+                .inorderTraversal(secondTree.root)
+                .join(' ')
+            expect(preOrderResult).toStrictEqual('a + b * c / d - e')
         })
 
         test('Postorder Traversal', () => {

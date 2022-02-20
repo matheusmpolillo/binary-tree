@@ -33,7 +33,23 @@ export default class Tree {
      * @returns {Array} Result of the traversal.
      */
     inorderTraversal(node) {
-        return []
+        let traversalResult = []
+
+        if (node.left)
+            traversalResult = traversalResult.concat(
+                this.inorderTraversal(node.left)
+            )
+        else return [node.getValue()]
+
+        traversalResult.push(node.getValue())
+
+        if (node.right)
+            traversalResult = traversalResult.concat(
+                this.inorderTraversal(node.right)
+            )
+        else return [node.getValue()]
+
+        return traversalResult
     }
 
     /**
