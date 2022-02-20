@@ -39,7 +39,6 @@ export default class Tree {
             traversalResult = traversalResult.concat(
                 this.inorderTraversal(node.left)
             )
-        else return [node.getValue()]
 
         traversalResult.push(node.getValue())
 
@@ -47,7 +46,6 @@ export default class Tree {
             traversalResult = traversalResult.concat(
                 this.inorderTraversal(node.right)
             )
-        else return [node.getValue()]
 
         return traversalResult
     }
