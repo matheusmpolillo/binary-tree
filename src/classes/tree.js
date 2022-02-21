@@ -58,7 +58,21 @@ export default class Tree {
      * @returns {Array} Result of the traversal.
      */
     postorderTraversal(node) {
-        return []
+        let traversalResult = []
+
+        if (node.left)
+            traversalResult = traversalResult.concat(
+                this.postorderTraversal(node.left)
+            )
+
+        if (node.right)
+            traversalResult = traversalResult.concat(
+                this.postorderTraversal(node.right)
+            )
+
+        traversalResult.push(node.getValue())
+
+        return traversalResult
     }
 
     /**
