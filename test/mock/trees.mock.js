@@ -12,6 +12,8 @@ import Node from '../../src/classes/node.js'
  *                /   \
  *             'D'    'E'
  *
+ *  Min Height: 3
+ *  Max Height: 9
  *    Preorder: "+ * A B - C / D E"
  *     Inorder: "A * B + C - D / E"
  *   Postorder: "A B * C D E / - +"
@@ -45,6 +47,8 @@ Node.setRight(firstTree.root.right.right, 'E')
  *       /  \
  *     'c'  'd'
  *
+ *  Min Height: 3
+ *  Max Height: 9
  *    Preorder: "+ a * b - / c d e"
  *     Inorder: "a + b * c / d - e"
  *   Postorder: "a b c d / e - * +"
