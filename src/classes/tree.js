@@ -5,6 +5,14 @@ export default class Tree {
         this.root = new Node(data)
     }
 
+    maxHeight(nodesCount) {
+        return nodesCount
+    }
+
+    minHeight(nodesCount) {
+        return parseInt(1 + Math.log(nodesCount))
+    }
+
     /**
      * Function responsible for traversing the tree in pre-order.
      * It starts by going through the root, goes through the left subtree, and ends by going through the right subtree.
